@@ -33,6 +33,24 @@ A **one-command setup** for junior and senior developers to get a complete, prod
 | **ripgrep** | Fast grep | Latest |
 | **bat** | Modern cat | Latest |
 
+### Installation Phases
+
+The setup runs in 9 sequential phases (~10-15 minutes):
+
+1. **Base System** - System updates, compilers, shell tools (gcc, tmux, zsh, fzf, ripgrep)
+2. **Git & SSH** - Version control, SSH key generation, GitHub CLI
+3. **VSCode** - Code editor with Microsoft repository
+4. **Node.js & pnpm** - JavaScript runtime and fast package manager
+5. **Python (Miniforge)** - Conda-based Python distribution for data science/ML
+6. **Containers** - Podman (daemonless) + Docker CE (optional)
+7. **Databases** - PostgreSQL + Redis with auto-start services
+8. **Linters** - ESLint, Prettier, Black, Ruff for code quality
+9. **Shell Tools** - Starship prompt for enhanced terminal experience
+
+Each phase checks if components exist before installing (idempotent design).
+
+📖 **[Full Installation Details](docs/INSTALLATION_DETAILS.md)** - Complete breakdown of what gets installed and why
+
 ---
 
 ## ⚡ Quick Start (3 Steps)
@@ -90,6 +108,7 @@ bash fedora_setup/verify_dev_environment.sh
 ## 📖 Documentation
 
 - **[QUICK_START.md](QUICK_START.md)** — Absolute beginner guide with screenshots
+- **[docs/INSTALLATION_DETAILS.md](docs/INSTALLATION_DETAILS.md)** — Complete breakdown of what gets installed
 - **[docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)** — Common issues and fixes
 - **[docs/POST_SETUP.md](docs/POST_SETUP.md)** — What to do after setup
 - **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** — How the scripts work
